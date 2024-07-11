@@ -64,9 +64,12 @@ public class EstimateSummary extends BasePage {
      */
     private String getElementOfTheSummary(String elementName){
         try {
-            return getDriver().findElement(By.xpath("//span[contains(text(), \"" + elementName + "\")]/following-sibling::span")).getText();
+            WebElement element = getDriver().findElement(By.xpath("//span[contains(text(), \"" + elementName + "\")]/following-sibling::span"));
+            waitLoadElement(getDriver(), element);
+            return element.getText();
+
         } catch (NoSuchElementException e) {
-            return ""; //return empty string if the information of "elementName" is not found
+            return "information not found"; //return if the information of "elementName" is not found
         }
     }
 }
