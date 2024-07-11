@@ -26,6 +26,9 @@ public class Pastebin {
     @FindBy (xpath = "//button[contains(text(), 'Create New Paste')]")
     private WebElement createButton;
 
+    @FindBy (xpath = "/html/body/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/a[1]")
+    private WebElement languageButton;
+
     public Pastebin openPage(WebDriver driver) {
         this.driver = driver;
         driver.get(URL);
@@ -45,6 +48,8 @@ public class Pastebin {
 
     public String createPaste() {
         createButton.click();
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOf(languageButton));
         return driver.getCurrentUrl();
     }
 }
