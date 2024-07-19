@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
  * Page Object class representing the Pricing calculator Home Page.
  * Extends BasePage to inherit common WebDriver and utility methods.
  */
-public class PricingCalcHome extends BasePage {
+public class PricingCalcHomePage extends BasePage {
     private static final String URL = "https://cloud.google.com/products/calculator";
 
     //WebElements on the page
@@ -24,7 +24,7 @@ public class PricingCalcHome extends BasePage {
      * Constructor for PricingCalcHome Page Object.
      * @param driver The WebDriver instance to use for interacting with the page.
      */
-    public PricingCalcHome(WebDriver driver) {
+    public PricingCalcHomePage(WebDriver driver) {
         super(driver); //call to BasePage constructor
         driver.get(URL); //navigate to the URL of Pricing Calculator
         PageFactory.initElements(driver, this); //initialize the WebElements

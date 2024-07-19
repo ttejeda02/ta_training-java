@@ -38,4 +38,12 @@ public class BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.visibilityOf(elementToWait));
     }
+
+    /**
+     * Get the current web page title
+     * @return A string of the web page title
+     */
+    public String getTabTitle(){
+        return driver.getTitle();
+    }
 }
