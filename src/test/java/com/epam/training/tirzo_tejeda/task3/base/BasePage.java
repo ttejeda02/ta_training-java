@@ -1,5 +1,7 @@
 package com.epam.training.tirzo_tejeda.task3.base;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,6 +13,7 @@ import java.time.Duration;
  * BasePage class provides common functionalities and WebDriver management for Page Objects.
  */
 public class BasePage {
+    protected final Logger logger = LogManager.getRootLogger();
     WebDriver driver;
 
     /**

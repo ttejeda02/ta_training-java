@@ -53,11 +53,13 @@ public class EstimateSummaryPage extends BasePage {
     /**
      * Method to switch to recently opened tab in PricingForm class.
      */
-    public void switchTab(){
+    public void switchTab() {
         WebDriver driver = getDriver();
 
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles()); //get the browser tabs
         driver.switchTo().window(tabs.get(1)); //switch to the second tab (the summary tab)
+
+        logger.info("The focus of the tab has been switched to the summary page");
     }
 
     public String getNumberOfInstancesInfoText() {

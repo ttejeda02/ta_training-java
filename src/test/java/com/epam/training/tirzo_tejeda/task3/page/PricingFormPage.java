@@ -122,6 +122,8 @@ public class PricingFormPage extends BasePage {
         WebElement ssdSelection = getElementSelection(configuration.getLocalSsd());
         waitLoadElement(driver, ssdSelection);
         ssdSelection.click();
+
+        logger.info("The basic instance form has been filled");
     }
 
     /**
@@ -144,6 +146,8 @@ public class PricingFormPage extends BasePage {
         WebElement gpuNumberSelection = getElementSelection(configuration.getNumberOfGpus());
         waitLoadElement(driver, gpuNumberSelection);
         gpuNumberSelection.click();
+
+        logger.info("The gpu form has been filled");
     }
 
     /**
@@ -187,6 +191,8 @@ public class PricingFormPage extends BasePage {
         shareEstimateButton.click();
         waitLoadElement(driver, estimateSummaryButton);
         estimateSummaryButton.click();
+
+        logger.info("The estimate summary has been opened");
     }
 
     /**

@@ -42,5 +42,7 @@ public class PricingCalcHomePage extends BasePage {
 
         waitLoadElement(driver, computeEngineButton); //wait for compute engine button visibility
         computeEngineButton.click();
+
+        logger.info("The calculation form has been loaded");
     }
 }
